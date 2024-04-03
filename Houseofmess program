@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Mess</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>House of Mess</h1>
+        <nav>
+            <ul>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#videos">Vidéos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="gallery">
+        <h2>Galerie Photo</h2>
+        <!-- Galerie photo -->
+    </section>
+    <section id="videos">
+        <h2>Vidéos</h2>
+        <!-- Section pour les vidéos -->
+    </section>
+    <section id="artworks">
+        <h2>Œuvres d'Art</h2>
+        <!-- Section pour présenter les œuvres d'art -->
+    </section>
+    <section id="clothing">
+        <h2>Vêtements de Marque</h2>
+        <!-- Section pour présenter les vêtements de marque -->
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <!-- Formulaire de contact -->
+    </section>
+    <footer>
+        <p>&copy; 2024 House of Mess</p>
+    </footer>
+</body>
+</html>
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #cccccc;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Gallérie Photo */
+/* Ajoutez le style pour la galerie photo selon vos préférences */
+
+/* Vidéos */
+/* Ajoutez le style pour la section des vidéos selon vos préférences */
+
+/* Œuvres d'Art */
+/* Ajoutez le style pour la section des œuvres d'art selon vos préférences */
+
+/* Vêtements de Marque */
+/* Ajoutez le style pour la section des vêtements de marque selon vos préférences */
+
+/* Contact */
+/* Ajoutez le style pour la section de contact selon vos préférences */
+// Fonction pour envoyer un e-mail
+function sendEmail() {
+    // Récupérer les données du formulaire de contact
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Envoyer l'e-mail à votre adresse e-mail (rockinmess644@gmail.com)
+    window.location.href = `mailto:your.email@example.com?subject=House%20of%20Mess%20Contact&body=Nom:%20${name}%0D%0AEmail:%20${email}%0D%0AMessage:%20${message}`;
+}
+
+// Fonction pour appeler
+function call() {
+    // Remplacez le numéro par votre numéro de téléphone
+    window.location.href = 'tel:+1234567890';
+}
+
+// Ajouter un écouteur d'événement au formulaire de contact
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    // Empêcher le formulaire de se soumettre normalement
+    event.preventDefault();
+    // Appeler la fonction sendEmail pour envoyer un e-mail
+    sendEmail();
+});
+
+// Ajouter des écouteurs d'événements pour les boutons d'appel
+document.getElementById('callButton').addEventListener('click', call);
